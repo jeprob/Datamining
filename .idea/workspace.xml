@@ -2,29 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff993aff-4099-4257-8cc5-8909c6f9729e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dm2_hwk2/cumvar_pca.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dm2_hwk2/cumvar_svd.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dm2_hwk2/homework2_PROBST.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dm2_hwk2/pca.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dm2_hwk2/pca_plot_transformeddata.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dm2_hwk2/pinv.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dm2_hwk2/run_hw2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dm2_hwk2/svd_plot_transformeddata.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dm2_hwk2/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dm2_hw3/pyproject.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dm2_hw3/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw1/cumvar_2_1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/dm2_hw1/cumvar_2_1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw1/cumvar_2_2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/dm2_hw1/cumvar_2_2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw1/exercise_2_1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/dm2_hw1/exercise_2_1.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw1/exercise_2_2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/dm2_hw1/exercise_2_2.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw1/homework1_PROBST.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/dm2_hw1/homework1_PROBST.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw1/pca.py" beforeDir="false" afterPath="$PROJECT_DIR$/dm2_hw1/pca.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw1/run_pca.py" beforeDir="false" afterPath="$PROJECT_DIR$/dm2_hw1/run_pca.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw1/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/dm2_hw1/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw3/impute.py" beforeDir="false" afterPath="$PROJECT_DIR$/dm2_ hw3/impute.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw3/pca.py" beforeDir="false" afterPath="$PROJECT_DIR$/dm2_ hw3/pca.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw3/run_hw3.py" beforeDir="false" afterPath="$PROJECT_DIR$/dm2_ hw3/run_hw3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw3/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/dm2_ hw3/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,15 +13,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dm2_hw1/pca.py">
+        <entry file="file://$PROJECT_DIR$/dm2_hw3/run_hw3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="707">
-              <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="221">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -63,7 +40,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -74,17 +50,24 @@
             <path>
               <item name="datamining2" type="b2602c69:ProjectViewProjectNode" />
               <item name="datamining2" type="462c0819:PsiDirectoryNode" />
-              <item name="dm2_hw1" type="462c0819:PsiDirectoryNode" />
+              <item name="dm2_hw3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dm2_hw3" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\probs\OneDrive\Documents\Uni\programming_projects\datamining2\dm2_hw3" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -97,6 +80,34 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="run_hw3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="datamining2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dm2_hw3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dm2_hw3/run_hw3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.run_hw3" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -119,7 +130,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32978722" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -136,11 +147,18 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/dm2_hw1/pca.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="707">
-          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
+        <state relative-caret-position="78">
+          <caret line="104" column="51" selection-start-line="104" selection-start-column="51" selection-end-line="104" selection-end-column="51" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dm2_hw3/run_hw3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>

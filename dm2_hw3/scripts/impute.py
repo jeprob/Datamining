@@ -4,6 +4,7 @@ Course  : Data Mining II (636-0019-00L)
 import scipy as sp
 import scipy.linalg as linalg
 from sklearn.metrics import mean_squared_error
+import numpy as np
 
 '''
 Impute missing values using the mean of each feature
@@ -84,10 +85,12 @@ def svd_imputation_optimised(X=None,ranks=None,
     minimal_error = sp.inf
 
     #TODO Update this function to find the optimal rank r for imputation of missing values
-
     #1. Get all non-nan indices
+    nan_indices = np.argwhere(np.isnan(X))
     #2. Use "test_size" % of the non-missing entries as test data
+    
     #3. Create a new training data matrix
+    
     #4. Find optimal rank r by minimising the Frobenius-Norm using the train and test data 
     for rank in ranks:
         print("\tTesting rank %d..."%(rank))
