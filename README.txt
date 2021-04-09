@@ -1,0 +1,1 @@
+These are programming tasks for Data Mining 1 and 2. 
