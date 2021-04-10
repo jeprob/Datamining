@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 Main Function
 '''
 if __name__ in "__main__":
-#    
+#
 #    # font size in plots:
 #    fs = 10
 #    matplotlib.rcParams['font.size'] = fs
@@ -94,5 +94,3 @@ if __name__ in "__main__":
     for gamma in gammas: 
         t_data_kernel_pca = RBFKernelPCA(X,gamma,2)
         plotTransformedData(t_data_kernel_pca, y, filename="kernel_pca_plot_transformeddata{}.pdf".format(gamma))
-    
-        

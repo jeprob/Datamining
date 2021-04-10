@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff993aff-4099-4257-8cc5-8909c6f9729e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dm2_hw3/pyproject.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dm2_hw3/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dm2_hw3/scripts/kernel_pca_plot_transformeddata1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/dm2_hw3/scripts/kernel_pca_plot_transformeddata1.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dm2_hw3/scripts/kernel_pca_plot_transformeddata10.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/dm2_hw3/scripts/kernel_pca_plot_transformeddata10.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dm2_hw3/scripts/kernel_pca_plot_transformeddata20.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/dm2_hw3/scripts/kernel_pca_plot_transformeddata20.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dm2_hw3/scripts/kernel_pca_plot_transformeddata5.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/dm2_hw3/scripts/kernel_pca_plot_transformeddata5.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dm2_hw3/scripts/kernel_pca_plot_transformeddata_1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/dm2_hw3/scripts/kernel_pca_plot_transformeddata_1.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dm2_hw3/scripts/pca_plot_transformeddata.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/dm2_hw3/scripts/pca_plot_transformeddata.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dm2_hw3/scripts/run_hw3.py" beforeDir="false" afterPath="$PROJECT_DIR$/dm2_hw3/scripts/run_hw3.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,10 +20,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dm2_hw3/run_hw3.py">
+        <entry file="file://$PROJECT_DIR$/dm2_hw3/scripts/run_hw3.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+              <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+              <folding>
+                <element signature="e#48#67#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -27,6 +35,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/dm2_hw3/scripts/run_hw3.py" />
+      </list>
+    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="15" />
@@ -52,6 +67,12 @@
               <item name="datamining2" type="462c0819:PsiDirectoryNode" />
               <item name="dm2_hw3" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="datamining2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="datamining2" type="462c0819:PsiDirectoryNode" />
+              <item name="dm2_hw3" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -61,7 +82,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dm2_hw3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ETH/Sem 2/Datamining2/homework/homework 3/handout/handout/scripts" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
@@ -81,7 +102,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.run_hw3 (1)">
+    <configuration name="run_hw3 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="datamining2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dm2_hw3/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dm2_hw3/scripts/run_hw3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="run_hw3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="datamining2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -105,6 +147,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.run_hw3 (1)" />
         <item itemvalue="Python.run_hw3" />
       </list>
     </recent_temporary>
@@ -136,7 +179,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32978722" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32978722" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32978722" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32978722" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -155,10 +198,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dm2_hw3/run_hw3.py">
+    <entry file="file://$PROJECT_DIR$/dm2_hw3/run_hw3.py" />
+    <entry file="file://$PROJECT_DIR$/dm2_hw3/scripts/run_hw3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+          <folding>
+            <element signature="e#48#67#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
