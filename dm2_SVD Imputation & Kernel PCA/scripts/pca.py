@@ -59,24 +59,22 @@ Note: Do not use an already implemented Kernel PCA algorithm.
 def RBFKernelPCA(matrix=None,gamma=1,n_components=2):
     n = matrix.shape[0]
     #1. Compute RBF Kernel
-    kernelmat = np.zeros((n,n))
-    for i in range(n):
-        for j in range(n):
-            kernelmat[i,j] = np.exp(-gamma*(np.linalg.norm(matrix[i,]-matrix[j,]))) 
+    kernelmat = np.exp(-gamma*(distance.cdist(matrix,matrix, metric='euclidean')))
     #2. Center kernel matrix
-    cen_kernelmat = (np.identity(n)-1/n*(np.ones((n,n)))) @ kernelmat @ (np.identity(n)-1/n*(np.ones((n,n))))
+    center = np.identity(n)-np.ones((n,n))/n
+    cen_kernelmat = center @ kernelmat @ center
     #3. Compute eigenvalues and eigenvactors
     [eigen_values, eigen_vectors] = linalg.eig(cen_kernelmat)
     #4. sort eigen vectors in decreasing order based on eigen values
     indices = sp.argsort(-eigen_values)
     [eigen_values, eigen_vectors] = [sp.real(eigen_values[indices]), eigen_vectors[:,indices]]
     #sollte nicht negativ sein: make them unit length
-    eigen_vectors = np.sqrt(1/eigen_values)*eigen_vectors
     #first two PCs:
-    A = eigen_vectors[:,0:n_components]
+    A = np.sqrt(1/eigen_values[:n_components])*eigen_vectors[:,:n_components]
     #5. Return transformed data
-    transformed = sp.dot(A.T,cen_kernelmat.T).T
-    return transformed
+    return sp.dot(A.T,cen_kernelmat.T).T
+
+
 '''
 Transform Input Data Onto New Subspace
 Input: pcs: matrix containing the first x principal components
@@ -137,9 +135,3 @@ Substract Mean from Data (zero mean)
 '''
 def zeroMean(X=None):
     return X - X.mean(axis=0)
-
-#    /)/)
-#   ('.')
-# (")(")0
-
-

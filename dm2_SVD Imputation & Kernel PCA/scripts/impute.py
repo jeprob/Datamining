@@ -3,6 +3,7 @@ Course  : Data Mining II (636-0019-00L)
 """
 import scipy as sp
 import scipy.linalg as linalg
+import copy
 from sklearn.metrics import mean_squared_error
 import numpy as np
 
@@ -76,39 +77,54 @@ Output: X_imputed: imputed data matrix using the optimised rank r
         errors: array of testing-errors [if flag is set]
 '''
 def svd_imputation_optimised(X=None,ranks=None,
-                             test_size=0.25,random_state=0,
+                             test_size=None,random_state=0,
                              return_optimal_rank=True,return_errors=True):
-    #init variables
+    # init variables
     sp.random.seed(random_state)
     testing_errors = []
     optimal_rank = sp.nan
     minimal_error = sp.inf
 
-    #TODO Update this function to find the optimal rank r for imputation of missing values
-    #1. Get all non-nan indices
-    nan_indices = np.argwhere(np.isnan(X))
-    #2. Use "test_size" % of the non-missing entries as test data
-    
-    #3. Create a new training data matrix
-    
-    #4. Find optimal rank r by minimising the Frobenius-Norm using the train and test data 
-    for rank in ranks:
-        print("\tTesting rank %d..."%(rank))
-        #4.1 Impute Training Data
-        #4.2 Compute the mean squared error of imputed test data with original test data and store error in array
-        testing_errors.append(error)
-        print("\t\tMean Squared Error: %.2f"%error)
-        #4.3 Update rank if necessary
-    
-    #5. Use optimal rank for imputing the "original" data matrix
-    print("Optimal Rank: %f (Mean-Squared Error: %.2f)"%(optimal_rank,minimal_error))
+    # 1. Get all non-nan indices
+    non_nan_indices = sp.where(~sp.isnan(X))
+    non_nan_indices_rows = non_nan_indices[0]
+    non_nan_indices_cols = non_nan_indices[1]
 
-    #return data
-    if return_optimal_rank==True and return_errors==True:
-        return [X_imputed,optimal_rank,testing_errors]
-    elif return_optimal_rank==True and return_errors==False:
-        return [X_imputed,optimal_rank]
-    elif return_optimal_rank==False and return_errors==True:
-        return [X_imputed,testing_errors]
+    # 2. Use "test_size" % of the non-missing entries as test data
+    test_train_array = np.arange(len(non_nan_indices_rows))
+    train_indices = np.random.choice(test_train_array, size=int(test_size*len(non_nan_indices_rows)), replace=False)
+    train_indices_rows = non_nan_indices_rows[train_indices]
+    train_indices_cols = non_nan_indices_cols[train_indices]
+
+    # 3. Create a new training data matrix
+    X_train = X.copy()
+    X_train[train_indices_rows, train_indices_cols] = np.nan
+
+    # 4.Find optimal rank r by minimising the Frobenius-Normusing the train and test data for rankin ranks:
+    for rank in ranks:
+        print("\t Testing rank %d ..." %(rank))
+        # 4.1 Impute Training Data
+        X_imp = svd_imputation(X_train, rank)
+        # 4.2 Compute the mean squared error of imputed test data with original test data and store error in array
+        error = mean_squared_error(X[train_indices_rows, train_indices_cols], X_imp[train_indices_rows, train_indices_cols])
+        testing_errors.append(error)
+        print("\t\tMeanSquaredError:%.2f" % error)
+
+        # 4.3 Update rank if necessary
+        if error<minimal_error:
+            minimal_error=error
+            optimal_rank=rank
+            X_imputed = X_imp
+
+    # 5. Use optimal rank for imputing the "original" data matrix
+    print("Optimal Rank: %f(Mean-SquaredError: %.2f)" % (optimal_rank, minimal_error))
+
+    # return data
+    if return_optimal_rank == True and return_errors == True:
+        return [X_imputed, optimal_rank, testing_errors]
+    elif return_optimal_rank == True and return_errors == False:
+        return [X_imputed, optimal_rank]
+    elif return_optimal_rank == False and return_errors == True:
+        return [X_imputed, testing_errors]
     else:
         return X_imputed
