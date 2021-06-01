@@ -126,14 +126,18 @@ def train_variant(X1, y1, X2, y2, C1, C2, C3):
     # for xi in X1, 0 <= ai <= C1
     # for xi in X2 and yi is 1,  0 <= ai <= C2
     # for xi in X2 and yi is -1, 0 <= ai <= C3
+
+    #create G
     tmp1 = np.diag(np.ones(n_samples) * -1)
     tmp2 = np.identity(n_samples)
     G = cvxopt.matrix(np.vstack((tmp1, tmp2)))
+
+    #create h
     tmp1 = np.zeros(n_samples)
     tmp2 = np.ones(n_samples)
-    tmp2[mark==0]*C1
-    tmp2[mark==1]*C2
-    tmp2[mark==-1]*C3
+    tmp2[mark==0]*=C1
+    tmp2[mark==1]*=C2
+    tmp2[mark==-1]*=C3
     h = cvxopt.matrix(np.hstack((tmp1, tmp2)))
 
     # Solve the quadratic programming problem

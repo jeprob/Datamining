@@ -48,16 +48,17 @@ def train(X1, y1, X2, C1, C2, p):
     C_pos = 1e-5 * num_pos / (X2.shape[0] - num_pos)
     while C_neg < C2 or C_pos < C2:
         # 5. Retrain the variant of SVM
-        w, b, e1, e2 = svm_linear.train_variant(X1, y1, X2, y2, C1, C_pos, C_neg)
+        w, b, e1, e2 = svm_linear.train_variant(X1, y1, X2, y2, C1=C1, C2=C_pos, C3=C_neg)
         # 6. Take a positive and negative example, switch their labels
         for m in range(X2.shape[0]):
             for l in range(X2.shape[0]):
                 if(y2[m]*y2[l]<0 and e2[l]>0 and e2[m]>0 and e2[m]+e2[l]>2):
+                    exists=True #ta
                     y2[m] = -1 * y2[m]
                     y2[l] = -1 * y2[l]
-                    w, b, e1, e2 = svm_linear.train_variant(X1, y1, X2, y2, C1, C_pos, C_neg)
-                # 7. Increase the value of C_neg and C_pos
-                C_neg = min(2*C_neg, C2)
-                C_pos = min(2*C_pos, C2)
+                    w, b, e1, e2 = svm_linear.train_variant(X1, y1, X2, y2, C1=C1, C2=C_pos, C3=C_neg)
+        # 7. Increase the value of C_neg and C_pos
+        C_neg = min(2*C_neg, C2)
+        C_pos = min(2*C_pos, C2)
     # 8. Return the learned model
     return (w, b)
